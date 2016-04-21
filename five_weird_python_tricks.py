@@ -1,3 +1,5 @@
+"""All Python code for Five Weird Python Tricks presentation."""
+
 
 # 1
 # Tuple Unpacking
@@ -154,10 +156,12 @@ print(10 * False)
 # How is this useful?
 # Counting things based on a boolean property
 
-a_string = 'jdi30dnm23-skls,k2ss'
+list_of_nums = [7, 2, 0, 3, 99, 11]
+insert_num = 10
 
-number_count = sum(char.isdigit() for char in a_string)
-print(number_count)
+insertion_index = sum(num < insert_num for num in list_of_nums)
+
+print(insertion_index)
 
 
 # Adding a string or not
@@ -173,7 +177,7 @@ for n in range(16):
     print(fizzbuzz or n)
 
 
-# All together now:
+# One line for your mind:
 
 for n in range(16):
     print('Fizz' * (n % 3 == 0) + 'Buzz' * (n % 5 == 0) or n)
